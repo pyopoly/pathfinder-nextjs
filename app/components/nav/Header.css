@@ -1,0 +1,74 @@
+.header {
+  background-color: black;
+  color: antiquewhite;
+}
+
+.app-title {
+  font-size: large;
+  font-weight: bold;
+  margin: 15px 0 0 15px;
+  float: left;
+  display: block;
+}
+
+.app-title:hover {
+  cursor: pointer;
+}
+
+.app-btns {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  transform: translateX(5%)
+}
+
+.btn.reset-btn {
+  background: black;
+}
+
+.btn.reset-btn:hover {
+  color: red;
+  background: black;
+}
+
+.btn {
+  display: inline-block;
+  background: rgb(31, 159, 179);
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  margin: 6px 1em 6px 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 500ms;
+}
+
+.btn:hover {
+  background: rgb(36, 190, 214);
+}
+
+/* .btn:focus {
+    outline: none;
+    background-color: red;
+  } */
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.icon-container{ 
+  display: inline-flex;
+  margin-left: 40px;
+}
+
+a {
+  color: white
+}

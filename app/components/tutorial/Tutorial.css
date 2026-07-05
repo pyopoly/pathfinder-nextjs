@@ -1,0 +1,129 @@
+/* 
+tutorial-outer: background. 100% of html page. Stops clicking of buttons in background.
+tutorial-container: container for the whole Tutorial. width: 50% , height: 70%. 
+tutorial-header: height: 25%
+tutorial-body:   height: 66%
+tutorial-footer: height: 7+2= 9%
+*/
+
+
+
+
+.tutorial-outer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 20;
+}
+
+.tutorial-container {
+    overflow: hidden;
+    position: absolute;
+    background-color: whitesmoke;
+    text-align: center;
+    width: 50%;
+    height: 70%;
+    border: 2px solid darkslategrey;
+    border-radius: 4px;
+    top: 15%;
+    right: 25%;
+    z-index: 100;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+.tutorial-header {
+    overflow: hidden;
+    height: 25%;
+}
+
+.tutorial-title {
+    color: rgb(49, 49, 49);
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 3%;
+}
+
+.tutorial-title-description {
+    color: rgb(77, 77, 77);
+    padding: 2% 2% 0 2%;
+}
+
+.tutorial-pages {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+}
+
+.tutorial-body {
+    overflow-y: scroll;
+    width: 100%;
+    padding-right: 17px;
+    height: 66%;
+}
+
+.tutorial-body-inner-container {
+    margin: 0;
+    padding-top: 3%;
+}
+
+.tutorial-footer {
+    height: 7%;
+    text-align: start;
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+    width: 96%;
+}
+
+.btn-2 {
+    float: right
+}
+
+.body-items {
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+    margin: 1%;
+}
+
+.sub-title {
+    font-weight: bolder;
+    color: rgb(48, 48, 48);
+    font-size: large;
+    margin: 0 2em 0 2.5em;
+}
+
+.sub-description {
+    text-align: start;
+    display: inline-block;
+    width: 60%;
+}
+
+.sub-title-pg2 {
+    display: inline-block;
+    text-align: start;
+    font-weight: bold;
+    color: rgb(48, 48, 48);
+    width: 25%;
+    margin: 0 2em 0 0;
+}
+
+.sub-description-pg2 {
+    text-align: start;
+    width: 65%;
+}
+
+
+/* ***************
+Responsive
+****************** */
+@media only screen and (max-width: 800px) {
+    .tutorial-container {
+        width: 95%;
+        right: 2.5%;
+    }
+    .tutorial-title {
+        font-size: 1.7em;
+    }
+}

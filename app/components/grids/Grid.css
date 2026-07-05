@@ -1,0 +1,99 @@
+.grid {
+  display: inline-block;
+  border: 1px solid lightsteelblue;
+  width: 25px;
+  height: 25px;
+  background-color: whitesmoke;
+  margin-left: -1px;
+  padding: 0px;
+  transition: backgroud-color, 500ms;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rows {
+  margin: 0;
+  height: 26px;
+}
+
+.grid.path {
+  background-color: rgb(248, 248, 192);
+  background-size: 11px;
+}
+
+.grid.path.up {
+  background-image: url(../../svg/arrow-up.svg);
+}
+
+.grid.path.right {
+  background-image: url(../../svg/arrow-right.svg);
+}
+
+.grid.path.down {
+  background-image: url(../../svg/arrow-down.svg);
+}
+
+.grid.path.left::before {
+  content: "";
+  position: fixed;
+  width: 11px;
+  height: 11px;
+  transform: rotate(-90deg);
+  margin: 7px;
+  background-image: url(../../svg/arrow-up.svg);
+}
+
+.grid.start {
+  background-color: rgb(207, 255, 136);
+  background-image: url(../../svg/start.svg);
+  background-size: 19px;
+}
+
+.goal {
+  background-image: url(../../svg/goal.svg);
+}
+
+.grid.found {
+  background-image: url(../../svg/found-star.svg);
+  background-size: 23px;
+}
+
+.grid.wall {
+  background-color: darkslategray;
+}
+
+.visited {
+  position: relative;
+  z-index: -1;
+  border: 1px solid rgb(175, 216, 248);
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(0, 0, 66, 0.75);
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: rgba(17, 104, 217, 0.75);
+  }
+
+  75% {
+    transform: scale(1.2);
+    background-color: rgba(0, 217, 159, 0.75);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(0, 190, 218, 0.75);
+  }
+}
